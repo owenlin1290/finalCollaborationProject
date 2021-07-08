@@ -213,6 +213,5 @@ player = Player()
 game = Game()
 
 
-
 playGame((player.inputPlayerLetter(),  (player.inputPlayerName()), (player.whoGoesFirst()), (screen.drawBoard()), (game.getPlayer1Move()), makeMove, isWinner, isBoardFull, getPlayer2Move, playAgain)
 
