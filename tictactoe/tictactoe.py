@@ -21,6 +21,11 @@
 
 import random
 
+# class Tictactoe:
+
+def __init__(playerName1, playerName2): # do we need self?
+    playerName1 = ''
+    playerName2 = ''
 
 def drawBoard(board):
     # This function prints out the board that it was passed.
@@ -129,21 +134,6 @@ def getPlayer2Move(board):
     return int(move2)
 
 
-def chooseRandomMoveFromList(board, movesList):
-    # Returns a valid move from the passed list on the passed board.
-    # Returns None if there is no valid move.
-    possibleMoves = []
-    for i in movesList:
-        if isSpaceFree(board, i):
-            possibleMoves.append(i)
-
-    if len(possibleMoves) != 0:
-        return random.choice(possibleMoves)
-    else:
-        return None
-
-
-
 def isBoardFull(board):
     # Return True if every space on the board has been taken. Otherwise return False.
     for i in range(1, 10):
@@ -209,3 +199,7 @@ while True:
 
     if not playAgain():
         break
+
+# game = Tictactoe()
+# do i put the function here now :
+#   ex. game.getplayer1move(arguments)?
