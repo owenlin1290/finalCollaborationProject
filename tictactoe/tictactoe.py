@@ -73,7 +73,9 @@ def whoGoesFirst(playerName1, playerName2):
 
 def playAgain():
     # This function returns True if the player wants to play again, otherwise it returns False.
-    print('Do you want to play again? (yes or no)')
+    print()
+    print('GAME OVER')
+    print('ENTER yes, to restart the game (yes or no)')
     return input().lower().startswith('y')
 
 
@@ -165,7 +167,7 @@ while True:
     gameIsPlaying = True
 
     while gameIsPlaying:
-        if turn == 'playerName1':
+        if turn == playerName1:
             # Player1's turn.
             drawBoard(theBoard)
             move = getPlayer1Move(theBoard)
@@ -185,7 +187,7 @@ while True:
                     print('The game is a tie!')
                     break
                 else:
-                    turn = 'playerName2'
+                    turn = playerName2
 
         else:
             # Player2's turn.
@@ -203,7 +205,7 @@ while True:
                     print('The game is a tie!')
                     break
                 else:
-                    turn = 'playerName1'
+                    turn = playerName1
 
     if not playAgain():
         break
